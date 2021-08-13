@@ -1,0 +1,54 @@
+package Week6;
+
+import java.util.*;
+import java.io.*;
+
+public class BOJ15666 {
+    static int atoi(String str) {
+        return Integer.parseInt(str);
+    }
+    static int N, M;
+    static int arr[];
+    static int ar[];
+    static Set<String> set = new LinkedHashSet<>();
+    public static void main(String[] args) throws IOException{
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st = new StringTokenizer(br.readLine());
+
+        N = atoi(st.nextToken());
+        M = atoi(st.nextToken());
+
+        arr = new int[N];
+        ar = new int[N];
+
+        st = new StringTokenizer(br.readLine());
+
+        for (int i = 0; i < N; i++) {
+            arr[i] = atoi(st.nextToken());
+        }
+
+        Arrays.sort(arr);
+
+        dfs(0, 0);
+
+        for (String s : set) {
+            System.out.println(s);
+        }
+    }
+
+    static void dfs(int start, int cnt) {
+        if (cnt == M) {
+            String str = "";
+            for (int i = 0; i < M; i++) {
+                str += ar[i] + " ";
+            }
+            set.add(str);
+            return;
+        }
+
+        for (int i = start; i < N; i++) {
+            ar[cnt] = arr[i];
+            dfs(i, cnt + 1);
+        }
+    }
+}
