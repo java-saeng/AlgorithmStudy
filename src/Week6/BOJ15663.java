@@ -59,3 +59,46 @@ public class BOJ15663 {
         }
     }
 }
+
+/*
+public class BOJ15663 {
+    static int atoi(String str) {
+        return Integer.parseInt(str);
+    }
+    static int N, M;
+    static int arr[];
+    static StringBuilder sb = new StringBuilder();
+    public static void main(String[] args) throws IOException{
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st = new StringTokenizer(br.readLine());
+
+        N = atoi(st.nextToken());
+        M = atoi(st.nextToken());
+
+        arr = new int[10001];
+
+        st = new StringTokenizer(br.readLine());
+        for (int i = 1; i <= N; i++) {
+            arr[atoi(st.nextToken())]++;
+        }
+        dfs("", 0);
+
+        System.out.println(sb);
+    }
+
+    static void dfs(String str, int cnt) {
+        if (cnt == M) {
+            sb.append(str).append("\n");
+            return;
+        }
+
+        for (int i = 1; i <= 10000; i++) {
+            if (arr[i] > 0) {
+                arr[i]--;
+                dfs(str + i + " ", cnt + 1);
+                arr[i]++;
+            }
+        }
+    }
+}
+*/
