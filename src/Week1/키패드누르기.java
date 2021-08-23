@@ -1,5 +1,7 @@
 package Week1;
 
+// 출처 : https://programmers.co.kr/learn/challenges
+
 import java.util.*;
 
 public class 키패드누르기 {

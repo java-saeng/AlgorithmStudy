@@ -1,5 +1,7 @@
 package Week1;
 
+// 출처 : https://programmers.co.kr/learn/challenges
+
 import java.util.*;
 
 class 로또의최고순위와최저순위 {

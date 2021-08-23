@@ -1,5 +1,7 @@
 package Week2;
 
+// 출처 : https://programmers.co.kr/learn/challenges
+
 import java.util.*;
 
 class K번째수 {
