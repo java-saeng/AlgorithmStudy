@@ -1,5 +1,7 @@
 package Week7;
 
+// 출처 : https://programmers.co.kr/learn/challenges
+
 import java.util.*;
 
 class 카카오프렌드컬러링북 {
