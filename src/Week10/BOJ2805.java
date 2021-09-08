@@ -12,7 +12,7 @@ public class BOJ2805 {
     static int A[];
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st = nwew StringTokenizer(br.readLine());
+        StringTokenizer st = new StringTokenizer(br.readLine());
 
         N = atoi(st.nextToken());
         M = atoi(st.nextToken());
